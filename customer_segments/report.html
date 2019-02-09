@@ -13559,7 +13559,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong> <br>
-I chose Detergents_Paper to predict, and got a 0.7612 score (higher than all others), leading us to believe the regressor did a decent job, leading us to believe Detergents_Paper is possibly the most relevant feature.</p>
+I chose Detergents_Paper to predict, and got a 0.7612 score (higher than all others), leading us to believe the regressor did a decent job in predicting Detergent_Papers from the other features. Therefore, we can assume that Detergent_Papers does not hold much unique information.</p>
 
 </div>
 </div>
@@ -14815,7 +14815,7 @@ First to fourth: 93.14% of the total variance. <br>
 <br>
 Dimension 1: Detergent_Papers has the highest impact on the feature (almost 0.8 in absolute value), whereas Delicatessen has the smallest influence. Milk and Grocery have high influence on this dimension as well. This suggest that the establishments have to do lots of cleaning, while also selling edible goods. What comes to my mind first is restaurants and cafés. <br>
 Dimension 2: Here, Fresh has the highest impact, followed closely by Delicatessen and Frozen. This might represent those high-end retail stores where they sell salami, ham, etc. <br>
-Dimension 3: Fresh is of greatest impact here as well, and so is delicatessen. In a way, this feels similar to the previous one. Maybe this is a Deli restaurant, since less frozen goods are consumed? Not sure about this one. <br>
+Dimension 3: Fresh is of greatest impact here as well, and so is delicatessen. In a way, this feels similar to the previous one. The values that are the most influential remain the same, whereas the low-impact ones suffered minor deviations. This suggests that this dimension is somewhat similar to the previous one. Maybe it is the same sort of businesses of those in Dimension 2, with slightly different distributions of products. <br>
 Dimension 4: This one really feels like a Deli retail supplier, who wells to dimensions 1, 2 and 3.</p>
 
 </div>
@@ -15130,7 +15130,7 @@ Dimension 4: This one really feels like a Deli retail supplier, who wells to dim
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong> <br>
 K-means tends to produce tighter clusters. It is also good if we know a priori how many clusters we want. <br>
-GMM, however, is more flexible, in that it produces 'soft clusters', assigning probabilities of points belonging to clusters. Also, it does not require us to know how many clusters we want. GMM also helps us bring latent features to the surface. <br>
+GMM, however, is more flexible, in that it produces 'soft clusters', assigning probabilities of points belonging to clusters. As we are not interested in strict clustering for our study, K-means appears to be less useful for us. GMM also helps us bring latent features to the surface. <br>
 It looks as though GMM is a lot better for us in this situation, since we want to discover latent features, and we do not have a previously established number of clusters.</p>
 
 </div>
@@ -15485,8 +15485,8 @@ Yes, the predictions are indeed rather consistent.</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong> <br>
-The distributor can use the segments to realise that customers who buy high amounts of Fresh might be very frustrated if they are only delivered goods three times a week, meaning that Segment 1 is likely to be unhappy. In fact, I suspect that although Segment 0 would probably show some more flexibility than Segment 1, many of the customers in that cluster might also dislike the change. Since they appear to be businesses which consume lots of cleaning material and groceries, thy might suffer harsh consequences should they run out of any products. Of course they could probably make larger orders to compensate for less frequent deliveries, making them less susceptible to resist the changes, but we would only be able to verify that by running A/B tests on them.
-I would suggest to keep delivering every day to Segment 0, and experiment with Segment 1.</p>
+The distributor can use the segments to realise that customers who buy high amounts of Fresh might be very frustrated if they are only delivered goods three times a week, meaning that Segment 1 is likely to be unhappy. In fact, I suspect that although Segment 0 would probably show some more flexibility than Segment 1, many of the customers in that cluster might also dislike the change. Since they appear to be businesses which consume lots of cleaning material and groceries, thy might suffer harsh consequences should they run out of any products. Of course they could probably make larger orders to compensate for less frequent deliveries, making them less susceptible to resist the changes, but we would only be able to verify that by running A/B tests on them. <br></p>
+<p>Thus, we would need to apply two A/B tests: one to each of our clusters. We would then compare the proportions of customers in each segment that liked/disliked the new delivery schedules, and try to estimate whether the overall segment would accept or resist the changes.</p>
 
 </div>
 </div>
