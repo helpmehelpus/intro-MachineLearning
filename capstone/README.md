@@ -3,7 +3,10 @@ This folder contains work for the capstone project of the Machine Learning Engin
 
 In this project, a Convolutional Neural Network model was implemented to detect the presence (or absence) of a certain species of cactus in sets of images.
 
-The `proposal.pdf` file contains the project proposal. The `capstone.ipynb` contains the code that was implemented for the project. The `report.pdf` file contains a thorough report of the process, detaling the methodology, metrics, results and considerations.
+The `proposal.pdf` file contains the project proposal. The `capstone.ipynb` contains the code that was implemented for the project. The `report.pdf` file contains a thorough report of the process, detaling the methodology, metrics, results and final considerations.
+
+As there are too many files in the dataset, the data is not explicitly present in this repository. The files can also be downloaded from Kaggle via the link: https://www.kaggle.com/c/13435/download-all.
+The link to the Kaggle competition is https://www.kaggle.com/c/aerial-cactus-identification/overview
 
 All the libraries used in the Anaconda environment that has been created are present on the `requirements.txt` file.
 
